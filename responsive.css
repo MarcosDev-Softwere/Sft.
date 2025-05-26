@@ -1,0 +1,348 @@
+/* ===========================================================
+   Carla Psicóloga  - Estilos Responsivos
+   =========================================================== */
+
+/* Grandes desktops e telas maiores (1200px e acima) */
+@media (min-width: 1200px) {
+    :root {
+        --container-max-width: 1140px;
+    }
+    
+    .hero__title {
+        font-size: 3.5rem;
+    }
+    
+    .section__title {
+        font-size: 2.75rem;
+    }
+}
+
+/* Laptops e desktops (992px a 1199px) */
+@media (max-width: 1199px) {
+    :root {
+        --container-max-width: 960px;
+    }
+    
+    .hero__title {
+        font-size: 3rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .footer__top {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .footer__nav {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablets e laptops pequenos (768px a 991px) */
+@media (max-width: 991px) {
+    :root {
+        --container-max-width: 720px;
+        --header-height: 70px;
+    }
+    
+    /* Header e Navegação */
+    .nav__toggle {
+        display: block;
+        z-index: 102;
+    }
+    
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--color-white);
+        padding: 6rem 2rem 2rem;
+        box-shadow: var(--shadow-lg);
+        transition: right var(--transition-normal);
+        z-index: 101;
+    }
+    
+    .nav__menu.show {
+        right: 0;
+    }
+    
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav__item {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .nav__link {
+        display: block;
+        padding: 0.75rem 0;
+        width: 100%;
+        border-bottom: 1px solid var(--color-gray-200);
+    }
+    
+    .nav__item--mobile {
+        display: block;
+        margin-top: var(--spacing-md);
+    }
+    
+    .nav__action {
+        display: none;
+    }
+    
+    /* Quando o menu está aberto */
+    .nav__toggle[aria-expanded="true"] .nav__toggle-icon:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .nav__toggle[aria-expanded="true"] .nav__toggle-icon:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav__toggle[aria-expanded="true"] .nav__toggle-icon:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    /* Hero Section */
+    .hero__wrapper {
+        flex-direction: column;
+    }
+    
+    .hero__content, 
+    .hero__visual {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero__title {
+        font-size: 2.5rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero__actions {
+        justify-content: center;
+    }
+    
+    /* About Section */
+    .about {
+        flex-direction: column;
+        gap: var(--spacing-2xl);
+    }
+    
+    .about__image, 
+    .about__content {
+        width: 100%;
+    }
+    
+    .stats__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Footer */
+    .footer__top {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .footer__nav {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Dispositivos Móveis (576px a 767px) */
+@media (max-width: 767px) {
+    :root {
+        --container-max-width: 540px;
+        --container-padding: 1rem;
+        --header-height: 70px;
+    }
+    
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .section__title {
+        font-size: 2rem;
+    }
+    
+    .section__description {
+        font-size: 1rem;
+    }
+    
+    /* Serviços */
+    .services__grid,
+    .benefits__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    /* Stats */
+    .stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    /* Contato */
+    .contact__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .form__row {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer */
+    .footer__nav {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer__nav-col {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: var(--spacing-lg);
+    }
+    
+    .footer__nav-col:last-child {
+        border-bottom: none;
+    }
+    
+    /* Botões flutuantes */
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .whatsapp-btn {
+        bottom: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    
+    .whatsapp-btn__tooltip {
+        display: none;
+    }
+    
+    .cookie-consent {
+        left: 1rem;
+        right: 1rem;
+        max-width: calc(100% - 2rem);
+    }
+    
+    .cookie-consent__actions {
+        flex-wrap: wrap;
+    }
+}
+
+/* Dispositivos Móveis Pequenos (até 575px) */
+@media (max-width: 575px) {
+    :root {
+        --container-padding: 1rem;
+    }
+    
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .hero {
+        padding-top: calc(var(--header-height) + var(--spacing-xl));
+    }
+    
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero__badge {
+        right: 0;
+        bottom: -10px;
+        font-size: 0.75rem;
+        padding: 0.75rem;
+        max-width: 200px;
+    }
+    
+    .hero__badge-icon {
+        font-size: 1.25rem;
+    }
+    
+    .hero__actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero__actions .btn {
+        width: 100%;
+    }
+    
+    .section__title {
+        font-size: 1.75rem;
+    }
+    
+    .btn--lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .about__experience {
+        right: 0;
+        bottom: 0;
+        width: 110px;
+        height: 110px;
+    }
+    
+    .about__experience-number {
+        font-size: 2.5rem;
+    }
+    
+    .stats__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-item {
+        padding: var(--spacing-md) 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+    
+    .cta__title {
+        font-size: 1.5rem;
+    }
+    
+    .cta__text {
+        font-size: 1rem;
+    }
+    
+    .footer__bottom {
+        gap: var(--spacing-md);
+    }
+}
