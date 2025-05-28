@@ -1,6 +1,6 @@
 
 /**
- * Mega Adubos - Script Principal
+ * Engenehiro de Softwere - Script Principal
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -304,16 +304,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-const text = "Nome é Marcos Vinícius, sou especialista no desenvolvimento de sites e landing pages. Cada site e landing page que desenvolvo é projetado para maximizar conversões, combinando design sofisticado, funcionalidade eficiente e otimização para resultados.🚀✨";
-let i = 0;
 
-function typeEffect() {
-    if (i < text.length) {
-        document.getElementById("typewriter").textContent += text.charAt(i);
-        i++;
-        setTimeout(typeEffect, 100);
-    }
-}
-
-window.onload = typeEffect;
 
