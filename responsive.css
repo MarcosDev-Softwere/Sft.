@@ -1,5 +1,5 @@
 /* ===========================================================
-   Engenheiro de Softwere - Estilos Responsivos
+   Carla Psicóloga  - Estilos Responsivos
    =========================================================== */
 
 /* Grandes desktops e telas maiores (1200px e acima) */
@@ -203,11 +203,92 @@
     }
     
     /* Contato */
-    .contact__grid {
+     /*.contact__grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
+    }*/
+    .contact {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.contact__info {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.contact__list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contact__item-icon {
+    font-size: 24px;
+    color: #007bff;
+}
+
+.contact__item-content {
+    flex: 1;
+}
+
+.contact__link {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.contact__social {
+    margin-top: 20px;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+.social__link {
+    font-size: 20px;
+    color: #fff;
+    background: #007bff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.social__link:hover {
+    background: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact__grid {
+        grid-template-columns: 1fr;
     }
-    
+
+    .contact__item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social {
+        justify-content: center;
+    }
+}
+
     .form__row {
         grid-template-columns: 1fr;
     }
