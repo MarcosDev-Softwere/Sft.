@@ -1,5 +1,5 @@
 /* ===========================================================
-   Carla Psicóloga  - Estilos Responsivos
+   Engenheiro de Softwere  - Estilos Responsivos
    =========================================================== */
 
 /* Grandes desktops e telas maiores (1200px e acima) */
@@ -169,45 +169,7 @@
     }
 }
 
-/* Dispositivos Móveis (576px a 767px) */
-@media (max-width: 767px) {
-    :root {
-        --container-max-width: 540px;
-        --container-padding: 1rem;
-        --header-height: 70px;
-    }
-    
-    .section {
-        padding: var(--spacing-2xl) 0;
-    }
-    
-    .section__title {
-        font-size: 2rem;
-    }
-    
-    .section__description {
-        font-size: 1rem;
-    }
-    
-    /* Serviços */
-    .services__grid,
-    .benefits__grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-    
-    /* Stats */
-    .stats__grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-md);
-    }
-    
-    /* Contato */
-     /*.contact__grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
-    }*/
-    .contact {
+.contact {
     padding: 40px 20px;
     max-width: 1200px;
     margin: auto;
@@ -221,13 +183,14 @@
 
 .contact__info {
     padding: 20px;
-    background: #f9f9f9;
+    background-color: #f9f9f9;
     border-radius: 8px;
 }
 
 .contact__list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .contact__item {
@@ -249,6 +212,11 @@
 .contact__link {
     text-decoration: none;
     color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact__link:hover {
+    color: #0056b3;
 }
 
 .contact__social {
@@ -258,19 +226,60 @@
 .social {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .social__link {
     font-size: 20px;
     color: #fff;
-    background: #007bff;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.social__link:hover {
+    background-color: hsl(240, 2%, 11%);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social {
+        justify-content: center;
+    }
+}
+
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+.social__link {
+    font-size: 20px;
+    color: lab(84.91% 0 -0.01);
+    background: rgb(24, 24, 202);
     padding: 10px;
     border-radius: 50%;
     transition: 0.3s ease-in-out;
 }
 
 .social__link:hover {
-    background: #0056b3;
+    background: hwb(114 88% 8%);
 }
 
 /* Responsividade */
@@ -300,7 +309,7 @@
     }
     
     .footer__nav-col {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid #4240401a;
         padding-bottom: var(--spacing-lg);
     }
     
@@ -337,7 +346,13 @@
     .cookie-consent__actions {
         flex-wrap: wrap;
     }
+.contact__info {
+    padding: 20px;
+    background-color: #000; /* Preto */
+    color: #fff; /* Texto branco para contraste */
+    border-radius: 8px;
 }
+
 
 /* Dispositivos Móveis Pequenos (até 575px) */
 @media (max-width: 575px) {
