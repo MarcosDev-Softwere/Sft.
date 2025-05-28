@@ -1,5 +1,5 @@
 /* ===========================================================
-   Carla Psicóloga  - Estilos Responsivos
+   Engenheiro de Softwere - Estilos Responsivos
    =========================================================== */
 
 /* Grandes desktops e telas maiores (1200px e acima) */
@@ -203,24 +203,11 @@
     }
     
     /* Contato */
-     /*.contact__grid {
+    .contact__grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
-    }*/
-    @media (max-width: 768px) {
-    .contact__grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
     }
-}
-.contact__info{
-
-    @media (max-width: 768px) {
-    .contact__grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-lg);
-    }
-}
+    
     .form__row {
         grid-template-columns: 1fr;
     }
