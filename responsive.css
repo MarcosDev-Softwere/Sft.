@@ -1,5 +1,5 @@
 /* ===========================================================
-   Engenheiro de Softwere  - Estilos Responsivos
+   Carla Psicóloga  - Estilos Responsivos
    =========================================================== */
 
 /* Grandes desktops e telas maiores (1200px e acima) */
@@ -202,7 +202,7 @@
 
 .contact__item-icon {
     font-size: 24px;
-    color: #007bff;
+    color: hsl(214, 9%, 85%);
 }
 
 .contact__item-content {
@@ -211,12 +211,12 @@
 
 .contact__link {
     text-decoration: none;
-    color: #007bff;
+    color: hwb(210 93% 5%);
     transition: color 0.3s ease-in-out;
 }
 
 .contact__link:hover {
-    color: #0056b3;
+    color: hsl(210, 3%, 85%);
 }
 
 .contact__social {
@@ -232,7 +232,7 @@
 .social__link {
     font-size: 20px;
     color: #fff;
-    background-color: #007bff;
+    background-color: hsl(218, 21%, 93%);
     padding: 10px;
     border-radius: 50%;
     transition: background-color 0.3s ease-in-out;
@@ -271,15 +271,15 @@
 
 .social__link {
     font-size: 20px;
-    color: lab(84.91% 0 -0.01);
-    background: rgb(24, 24, 202);
+    color: lch(12.25% 0 296.81);
+    background: #d4d4d6;
     padding: 10px;
     border-radius: 50%;
     transition: 0.3s ease-in-out;
 }
 
 .social__link:hover {
-    background: hwb(114 88% 8%);
+    background: lab(66.95% -18.58 9.1);
 }
 
 /* Responsividade */
