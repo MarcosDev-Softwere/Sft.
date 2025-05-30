@@ -1,5 +1,5 @@
 /* ===========================================================
-   Mega Adubos - Estilos Principais
+   Marcos Engenheiro de Softwre - Estilos Principais
    Design limpo, elegante e profissional
    =========================================================== */
 
@@ -1219,6 +1219,7 @@ button, input, textarea, select {
 }
 
 .footer__logo {
+   border-radius: 50%;
     max-width: 160px;
 }
 
@@ -1228,6 +1229,7 @@ button, input, textarea, select {
 }
 
 .footer__nav {
+   
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-xl);
